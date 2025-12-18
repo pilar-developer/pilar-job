@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login Pilar Job</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background: #f4f6f8;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login-container {
+        width: 100%;
+        padding: 15px;
+      }
+
+      .login-card {
+        max-width: 420px;
+        background: #fff;
+        margin: auto;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        text-align: center;
+      }
+
+      /* Logo */
+      .logo img {
+        width: 60px;
+        margin-bottom: 5px;
+      }
+
+      .logo h4 {
+        margin: 5px 0 0;
+        font-weight: 700;
+      }
+
+      .logo small {
+        color: #666;
+      }
+
+      h2 {
+        margin-top: 25px;
+      }
+
+      .subtitle {
+        color: #777;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      /* Form */
+      .form-group {
+        text-align: left;
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        font-size: 14px;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        margin-top: 5px;
+      }
+
+      .label-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .forgot {
+        font-size: 13px;
+        text-decoration: none;
+        color: #007bff;
+      }
+
+      .remember {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 10px 0 20px;
+        font-size: 14px;
+      }
+
+      /* Button */
+      .btn-login {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        background: #0256f3;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .btn-login:hover {
+        background: #474444;
+      }
+
+      /* Divider */
+      .divider {
+        margin: 25px 0;
+        position: relative;
+        color: #888;
+        font-size: 14px;
+      }
+
+      .divider::before,
+      .divider::after {
+        content: "";
+        height: 1px;
+        width: 40%;
+        background: #ddd;
+        position: absolute;
+        top: 50%;
+      }
+
+      .divider::before {
+        left: 0;
+      }
+
+      .divider::after {
+        right: 0;
+      }
+
+      /* Register */
+      .register-text {
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+
+      .btn-outline {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        background: #fff;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      .btn-outline:hover {
+        background: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="login-container">
+        <!-- Logo -->
+        <div class="logo" style="text-align: center;">
+          <img src="img/job.png" style="width: auto; height: 80px;">
+        </div>
+      <div class="login-card">
+
+        <h2>Silakan Login</h2>
+        <!-- <p class="subtitle">Masukan dengan alamat email dan password anda.</p> -->
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label>Alamat Email</label>
+            <input type="email" id="email" placeholder="email@example.com" required/>
+          </div>
+
+          <div class="form-group">
+            <div class="label-flex">
+              <label>Password</label>
+              <a href="#" class="forgot">Lupa Password?</a>
+            </div>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <div class="remember">
+            <input type="checkbox" id="remember" />
+            <label for="remember">Ingat saya</label>
+          </div>
+
+          <button type="submit" class="btn-login">Login</button>
+        </form>
+
+        <div class="divider">Atau</div>
+
+        <p class="register-text">Belum punya akun?</p>
+
+        <button class="btn-outline">Registrasi sebagai Pencari Kerja</button>
+        <button class="btn-outline">Registrasi sebagai Perusahaan</button>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          if (!email || !password) {
+            alert("Email dan password wajib diisi!");
+            return;
+          }
+
+          // simulasi login
+          alert("Login berhasil!\nEmail: " + email);
+        });
+    </script>
+  </body>
+</html>
