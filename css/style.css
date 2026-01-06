@@ -7,7 +7,8 @@
 body {
   font-family: "Poppins", sans-serif;
   background: #fafafa;
-  padding-top: 76px;
+  /* padding-top: 76px; */
+  padding-top: calc(76px + env(safe-area-inset-top));
 }
 
 
@@ -15,12 +16,6 @@ body {
 .job-detail-header {
   padding-top: 90px;
 } */
-
-.navbar-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 1050;
-}
 
 .navbar-logo {
   height: 50px;
@@ -30,7 +25,8 @@ body {
 
 .navbar {
   background: linear-gradient(90deg, var(--primary), #9b6dff);
-   /* z-index: 1050; */
+   z-index: 1050;
+   padding-top: env(safe-area-inset-top);
 }
 .navbar .nav-link {
   color: #fff;
