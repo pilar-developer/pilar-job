@@ -7,8 +7,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background: #fafafa;
-  /* padding-top: 76px; */
-  padding-top: calc(76px + env(safe-area-inset-top));
+  padding-top: 76px;
 }
 
 
@@ -25,8 +24,6 @@ body {
 
 .navbar {
   background: linear-gradient(90deg, var(--primary), #9b6dff);
-   z-index: 1050;
-   padding-top: env(safe-area-inset-top);
 }
 .navbar .nav-link {
   color: #fff;
@@ -418,8 +415,8 @@ textarea.form-control {
   object-fit: cover;
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   body {
     padding-top: 64px;
   }
-}
+} */
