@@ -7,11 +7,9 @@
 body {
   font-family: "Poppins", sans-serif;
   background: #fafafa;
+  padding-top: 76px;
 }
 
-#home{
-  padding-top: 90px;
-}
 
 /* #home,
 .job-detail-header {
@@ -26,6 +24,7 @@ body {
 
 .navbar {
   background: linear-gradient(90deg, var(--primary), #9b6dff);
+   z-index: 1050;
 }
 .navbar .nav-link {
   color: #fff;
@@ -37,7 +36,8 @@ body {
 
 /* Hero */
 .hero {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  min-height: calc(100vh - 76px);
   display: flex;
   align-items: center;
 }
@@ -416,4 +416,8 @@ textarea.form-control {
   object-fit: cover;
 }
 
-
+@media (max-width: 576px) {
+  body {
+    padding-top: 64px;
+  }
+}
