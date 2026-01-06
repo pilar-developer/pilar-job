@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>InklusifJob | Lowongan Disabilitas</title>
+    <link rel="web icon" type="photo" href="img/logo_pilar.png" />
+    <title>Pilar Developer | Lowongan Pekerjaan Disabilitas</title>
 
     <!-- Bootstrap -->
     <link
@@ -58,11 +59,16 @@
               <a class="nav-link" href="#contact">Kontak</a>
             </li>
 
-            <li class="nav-item ms-3">
-              <a class="btn btn-outline-light btn-sm" href="login.html">Login</a>
+            <li class="nav-item ms-3 mt-2">
+              <a class="btn btn-outline-light btn-sm" href="login.html"
+                >Login</a
+              >
             </li>
-            <li class="nav-item ms-2">
-              <a href="register.html" class="btn btn-light btn-sm text-primary fw-semibold">
+            <li class="nav-item ms-2 mt-2">
+              <a
+                href="register.html"
+                class="btn btn-light btn-sm text-primary fw-semibold"
+              >
                 Daftar
               </a>
             </li>
@@ -140,18 +146,96 @@
     <!-- Jobs -->
     <section id="jobs" class="section bg-light">
       <div class="container">
-        <h2 class="fw-bold text-center mb-5">Lowongan Tersedia</h2>
+        <h2 class="fw-bold text-center mb-4">Lowongan Tersedia</h2>
 
+        <!-- SEARCH & FILTER -->
+        <div class="card border-0 shadow-sm mb-5">
+          <div class="card-body">
+            <div class="row g-3">
+              <!-- POSISI -->
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  id="jobSearch"
+                  class="form-control"
+                  placeholder="Cari posisi pekerjaan"
+                />
+              </div>
+
+              <!-- LOKASI -->
+              <div class="col-md-4">
+                <select class="form-select" id="filterLocation">
+                  <option value="">Semua Lokasi</option>
+                  <option value="jakarta">Jakarta</option>
+                  <option value="bandung">Bandung</option>
+                  <option value="surabaya">Surabaya</option>
+                </select>
+              </div>
+
+              <!-- BUTTON SEARCH -->
+              <div class="col-md-2 d-grid">
+                <button class="btn btn-primary">
+                  <i class="bx bx-search"></i>
+                </button>
+              </div>
+
+              <!-- JENIS LOWONGAN -->
+              <div class="col-md-3">
+                <select class="form-select" id="filterType">
+                  <option value="">Semua Lowongan</option>
+                  <option value="full time">Full Time</option>
+                  <option value="magang">Magang</option>
+                  <option value="part time">Part Time</option>
+                </select>
+              </div>
+
+              <!-- PERUSAHAAN -->
+              <div class="col-md-3">
+                <select class="form-select" id="filterCompany">
+                  <option value="">Semua Perusahaan</option>
+                  <option value="inklusif">PT Inklusif Mandiri</option>
+                  <option value="garuda">PT Garuda Food</option>
+                  <option value="teknologi">PT Teknologi Inklusi</option>
+                </select>
+              </div>
+
+              <!-- JENIS DISABILITAS -->
+              <div class="col-md-3">
+                <select class="form-select" id="filterDisability">
+                  <option value="">Semua Disabilitas</option>
+                  <option value="daksa">Daksa</option>
+                  <option value="netra">Netra</option>
+                  <option value="rungu">Rungu</option>
+                  <option value="wicara">Wicara</option>
+                </select>
+              </div>
+
+              <!-- JENJANG -->
+              <div class="col-md-3">
+                <select class="form-select">
+                  <option>Jenjang Pendidikan</option>
+                  <option>SMA/SMK</option>
+                  <option>D3</option>
+                  <option>S1</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LIST LOWONGAN -->
         <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-md-4">
+          <!-- CARD -->
+          <div
+            class="col-md-4 job-item"
+            data-location="jakarta"
+            data-type="full time"
+            data-company="inklusif"
+            data-disability="daksa wicara"
+          >
             <div class="card job-card h-100">
               <div class="job-header d-flex align-items-center gap-3">
-                <img
-                  src="/img/logo_pilar.png"
-                  alt="PT Inklusif Mandiri"
-                  class="job-logo"
-                />
+                <img src="img/logo_pilar.png" class="job-logo" />
                 <div>
                   <h6 class="mb-0 fw-semibold">PT Inklusif Mandiri</h6>
                   <small class="text-muted">Jakarta • Hybrid</small>
@@ -161,7 +245,6 @@
               <div class="card-body">
                 <h5 class="mt-3">Admin Data</h5>
 
-                <!-- JENIS DISABILITAS -->
                 <p class="small mb-2">
                   <strong>Jenis Disabilitas:</strong> Daksa, Wicara
                 </p>
@@ -172,10 +255,7 @@
                   <li>
                     <i class="bx bx-calendar-edit"></i> Dibuat: 10 Jan 2025
                   </li>
-                  <li>
-                    <i class="bx bx-calendar-x"></i>
-                    Ditutup: 30 Jan 2025
-                  </li>
+                  <li><i class="bx bx-calendar-x"></i> Ditutup: 30 Jan 2025</li>
                 </ul>
               </div>
 
@@ -188,15 +268,17 @@
             </div>
           </div>
 
-          <!-- Card 2 -->
-          <div class="col-md-4">
+          <!-- CARD 2 -->
+          <div
+            class="col-md-4 job-item"
+            data-location="bandung"
+            data-type="full time"
+            data-company="garuda"
+            data-disability="rungu"
+          >
             <div class="card job-card h-100">
               <div class="job-header d-flex align-items-center gap-3">
-                <img
-                  src="img/garudafood.png"
-                  alt="PT Akses Digital"
-                  class="job-logo"
-                />
+                <img src="img/garudafood.png" class="job-logo" />
                 <div>
                   <h6 class="mb-0 fw-semibold">PT Garuda Food</h6>
                   <small class="text-muted">Bandung • Remote</small>
@@ -205,109 +287,75 @@
 
               <div class="card-body">
                 <h5 class="mt-3">Customer Support</h5>
-
-                <!-- JENIS DISABILITAS -->
                 <p class="small mb-2">
-                  <strong>Jenis Disabilitas:</strong> Wicara, Rungu
+                  <strong>Jenis Disabilitas:</strong> Rungu
                 </p>
-
-                <p class="small text-muted mt-2">Full Time • Layanan</p>
-
-                <ul class="job-info list-unstyled small">
-                  <li>
-                    <i class="bx bx-calendar-edit"></i> Dibuat: 08 Jan 2025
-                  </li>
-                  <li><i class="bx bx-calendar-x"></i> Ditutup: 25 Jan 2025</li>
-                </ul>
+                <p class="small text-muted">Full Time • Layanan</p>
               </div>
 
               <div class="job-footer d-flex gap-2 p-3">
-                <button class="btn btn-outline-primary w-50">
-                  Lihat Detail
-                </button>
+                <button class="btn btn-outline-primary w-50">Detail</button>
                 <button class="btn btn-primary w-50">Lamar</button>
               </div>
             </div>
           </div>
 
-          <!-- Card 3 -->
-          <div class="col-md-4">
+          <div
+            class="col-md-4 job-item"
+            data-location="bandung"
+            data-type="full time"
+            data-company="garuda"
+            data-disability="rungu"
+          >
             <div class="card job-card h-100">
               <div class="job-header d-flex align-items-center gap-3">
-                <img
-                  src="img/Telkomsel.png"
-                  alt="PT Teknologi Inklusi"
-                  class="job-logo"
-                />
+                <img src="img/garudafood.png" class="job-logo" />
                 <div>
-                  <h6 class="mb-0 fw-semibold">PT Teknologi Inklusi</h6>
-                  <small class="text-muted">Surabaya • WFH</small>
+                  <h6 class="mb-0 fw-semibold">PT Garuda Food</h6>
+                  <small class="text-muted">Bandung • Remote</small>
                 </div>
               </div>
 
               <div class="card-body">
-                <h5 class="mt-3">Web Administrator</h5>
-
-                <!-- JENIS DISABILITAS -->
+                <h5 class="mt-3">Customer Support</h5>
                 <p class="small mb-2">
-                  <strong>Jenis Disabilitas:</strong> Daksa, Netra
+                  <strong>Jenis Disabilitas:</strong> Rungu
                 </p>
-
-                <p class="small text-muted mt-2">Magang • IT</p>
-
-                <ul class="job-info list-unstyled small">
-                  <li>
-                    <i class="bx bx-calendar-edit"></i> Dibuat: 05 Jan 2025
-                  </li>
-                  <li><i class="bx bx-calendar-x"></i> Ditutup: 20 Jan 2025</li>
-                </ul>
+                <p class="small text-muted">Full Time • Layanan</p>
               </div>
 
               <div class="job-footer d-flex gap-2 p-3">
-                <button class="btn btn-outline-primary w-50">
-                  Lihat Detail
-                </button>
+                <button class="btn btn-outline-primary w-50">Detail</button>
                 <button class="btn btn-primary w-50">Lamar</button>
               </div>
             </div>
           </div>
-
-          <div class="col-md-4">
+          <div
+            class="col-md-4 job-item"
+            data-location="bandung"
+            data-type="full time"
+            data-company="garuda"
+            data-disability="rungu"
+          >
             <div class="card job-card h-100">
               <div class="job-header d-flex align-items-center gap-3">
-                <img
-                  src="img/Telkomsel.png"
-                  alt="PT Teknologi Inklusi"
-                  class="job-logo"
-                />
+                <img src="img/garudafood.png" class="job-logo" />
                 <div>
-                  <h6 class="mb-0 fw-semibold">PT Teknologi Inklusi</h6>
-                  <small class="text-muted">Surabaya • WFH</small>
+                  <h6 class="mb-0 fw-semibold">PT Garuda Food</h6>
+                  <small class="text-muted">Bandung • Remote</small>
                 </div>
               </div>
 
               <div class="card-body">
-                <h5 class="mt-3">Web Administrator</h5>
-
-                <!-- JENIS DISABILITAS -->
+                <h5 class="mt-3">Customer Support</h5>
                 <p class="small mb-2">
-                  <strong>Jenis Disabilitas:</strong> Daksa, Netra
+                  <strong>Jenis Disabilitas:</strong> Rungu
                 </p>
-
-                <p class="small text-muted mt-2">Magang • IT</p>
-
-                <ul class="job-info list-unstyled small">
-                  <li>
-                    <i class="bx bx-calendar-edit"></i> Dibuat: 05 Jan 2025
-                  </li>
-                  <li><i class="bx bx-calendar-x"></i> Ditutup: 20 Jan 2025</li>
-                </ul>
+                <p class="small text-muted">Full Time • Layanan</p>
               </div>
 
               <div class="job-footer d-flex gap-2 p-3">
-                <button class="btn btn-outline-primary w-50">
-                  Lihat Detail
-                </button>
+                <button class="btn btn-outline-primary w-50">Detail</button>
                 <button class="btn btn-primary w-50">Lamar</button>
               </div>
             </div>
@@ -484,17 +532,21 @@
         <div class="row justify-content-center align-items-center g-4 mb-4">
           <div class="col-6 col-md-3 text-center">
             <div class="partner-box">
-               <img src="img/Telkomsel.png" class="partner-logo" alt="Telkom" />
-            </div>
-          </div>
-          <div class="col-6 col-md-3 text-center">
-             <div class="partner-box">
-               <img src="img/Bri.jpg" class="partner-logo" alt="BRI" />
+              <img src="img/Telkomsel.png" class="partner-logo" alt="Telkom" />
             </div>
           </div>
           <div class="col-6 col-md-3 text-center">
             <div class="partner-box">
-                  <img src="img/Logo-Pelindo.png" class="partner-logo" alt="Pelindo"/>
+              <img src="img/Bri.jpg" class="partner-logo" alt="BRI" />
+            </div>
+          </div>
+          <div class="col-6 col-md-3 text-center">
+            <div class="partner-box">
+              <img
+                src="img/Logo-Pelindo.png"
+                class="partner-logo"
+                alt="Pelindo"
+              />
             </div>
           </div>
           <div class="col-6 col-md-3 text-center">

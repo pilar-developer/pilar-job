@@ -9,10 +9,14 @@ body {
   background: #fafafa;
 }
 
-#home,
-.job-detail-header {
+#home{
   padding-top: 90px;
 }
+
+/* #home,
+.job-detail-header {
+  padding-top: 90px;
+} */
 
 .navbar-logo {
   height: 50px;
@@ -43,7 +47,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* gambar penuh, tidak gepeng */
+  object-fit: cover;
   z-index: 1;
 }
 
@@ -411,4 +415,5 @@ textarea.form-control {
   height: 200px;
   object-fit: cover;
 }
+
 
